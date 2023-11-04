@@ -20,9 +20,9 @@ body{
 
 .container{
     width: 90%;
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding: 80px 0;
 }
 
@@ -34,13 +34,12 @@ body{
 
 .hero{
     background:linear-gradient(to right, #3e587b 30%, #2D4059 100%);
-    /* background-image: url(/assets/themis3.png); */
-    /* background-repeat: no-repeat ;
-    background-size:cover;
-    background-attachment: fixed;
-    background-position: center;
-    z-index: -2;
-    position: relative; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
     
 }
 
@@ -116,13 +115,14 @@ body{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    /* width: auto; */
 }
 
 .hero__img{
     width: 100%;
     display: block; 
     /* max-width: 450px; */
-    /* margin: 0 auto; */
+    margin: 0 auto;
 }
 
 .hero__figure{
@@ -140,7 +140,7 @@ body{
 }
 
 .hero__title{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .hero__paragraph{
@@ -151,14 +151,19 @@ body{
 }
 
 .hero__cta{
-    background-color: rgba(38, 32, 208, 0.487);
-    color: #fff;
+    background-color: rgb(255, 255, 255);
+    color: var(--blue);
     text-decoration: none;
     padding: 1em 3em;
     
     justify-self: center;
     border-radius: 6px;
 
+}
+
+.hero__cta:hover{
+    background-color:#f6cd5d;
+    color: var(--blue);
 }
 
 /* WAVES WAVES WAVES WAVES WAVES WAVES WAVES WAVES WAVES WAVES WAVES WAVES WAVES WAVESWAVES WAVES WAVES WAVES WAVES WAVES WAVESWAVES WAVES WAVES WAVES WAVES WAVES WAVESWAVES WAVES WAVES WAVES WAVES WAVES WAVESWAVES WAVES WAVES WAVES WAVES WAVES WAVES  */
@@ -528,14 +533,15 @@ body{
         }
     
         /* hero-main */
-    
+        
         .hero__main {
             flex-direction: row;
             gap: 40px;
+            max-width: auto;
             min-height: 550px;
-            max-height: auto;
+            /* max-height: auto; */
             align-items: center;
-            /* width: 100vh; */
+        
         }
     
         .hero__figure {
@@ -545,11 +551,11 @@ body{
         }
     
         .hero__img {
-            width: 550px;
+            width: 100%;
         }
     
         .hero__texts {
-            width: 54%;
+            width: 50%;
             text-align: start;
             gap: 2rem;
             padding-bottom: 0;
